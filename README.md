@@ -1,2 +1,2 @@
-# Rockstar-RStudio
-This Docker image is based on Rocker/RStudio and comes with various packages pre-installed (rJava, JDK11, Drat, and Packrat).
+# Rockstar
+Various Dockerfiles based on Rocker images and comes with various packages pre-installed (rJava, JDK11, Drat, Packrat, etc).
