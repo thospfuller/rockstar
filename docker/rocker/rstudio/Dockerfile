@@ -31,11 +31,18 @@ RUN su -
 RUN apt-get update
 RUN sudo apt-get install -y git
 RUN sudo apt-get -y install apt-utils
+RUN sudo apt-get -y install nano
 RUN sudo apt-get -y install openjdk-11-jre openjdk-11-jdk
 
 RUN R CMD javareconf
 
-# RUN sudo chown -R rstudio:rstudio /home/rstudio/*
+COPY Rprofile /home/rstudio/.Rprofile
+COPY welcome.txt /home/rstudio/.welcome.txt
+COPY bash_profile /home/rstudio/.bash_profile
+
+RUN sudo chown -R rstudio:rstudio /home/rstudio/.Rprofile
+RUN sudo chown -R rstudio:rstudio /home/rstudio/.welcome.txt
+RUN sudo chown -R rstudio:rstudio /home/rstudio/.bash_profile
 
 RUN chown rstudio:rstudio /usr/local/lib/R/
 RUN chown -R rstudio:rstudio /usr/local/lib/R/
