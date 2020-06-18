@@ -1,2 +1,4 @@
-welcome <- readLines(con = file('.welcome.txt'))
-cat(welcome, sep='\n')
+welcomeConnection <- file('.welcome.txt')
+welcomeText <- readLines(con = welcomeConnection)
+cat(welcomeText, sep='\n')
+unlink(welcomeConnection)
