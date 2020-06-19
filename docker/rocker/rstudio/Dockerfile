@@ -27,11 +27,18 @@
 #
 FROM rocker/rstudio:latest
 
+#
+# The rstudio user will have sudo access.
+#
+RUN sudo usermod -aG sudo rstudio
+
 RUN su -
 RUN apt-get update
 RUN sudo apt-get install -y git
 RUN sudo apt-get -y install apt-utils
 RUN sudo apt-get -y install nano
+RUN sudo apt-get -y install curl
+RUN sudo apt-get -y install libxml2-dev
 RUN sudo apt-get -y install openjdk-11-jre openjdk-11-jdk
 
 RUN R CMD javareconf
@@ -39,6 +46,8 @@ RUN R CMD javareconf
 COPY Rprofile /home/rstudio/.Rprofile
 COPY welcome.txt /home/rstudio/.welcome.txt
 COPY bash_profile /home/rstudio/.bash_profile
+
+RUN curl https://raw.githubusercontent.com/thospfuller/rockstar/master/LICENSE -o /home/rstudio/LICENSE
 
 RUN sudo chown -R rstudio:rstudio /home/rstudio/.Rprofile
 RUN sudo chown -R rstudio:rstudio /home/rstudio/.welcome.txt
@@ -61,6 +70,9 @@ RUN R -e 'install.packages("drat")'
 RUN R -e 'install.packages("RJSONIO")'
 RUN R -e 'install.packages("packrat")'
 RUN R -e 'install.packages("rJava")'
+RUN R -e 'install.packages("xml2")'
+RUN R -e 'install.packages("roxygen2")'
+RUN R -e 'install.packages("devtools")'
 
 RUN sudo apt-get update
 

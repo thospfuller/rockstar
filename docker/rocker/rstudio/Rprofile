@@ -1,4 +1,4 @@
-welcomeConnection <- file('.welcome.txt')
+welcomeConnection <- file('/home/rstudio/.welcome.txt')
 welcomeText <- readLines(con = welcomeConnection)
 cat(welcomeText, sep='\n')
 unlink(welcomeConnection)
