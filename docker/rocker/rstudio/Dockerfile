@@ -18,6 +18,10 @@
 #
 # -----
 #
+# When building locally:
+#
+# docker build docker/rocker/rstudio -t rockstar/rstudio
+#
 # docker run -d -p 8787:8787 -e PASSWORD=password --name rsrstudio -i -t [id]
 # docker exec -it rsrstudio /bin/bash
 #
