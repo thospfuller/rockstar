@@ -7,6 +7,11 @@
 #
 # docker build docker/rocker/rstudio/ -t rockstar/rstudio[:v2]
 #
+# ----- Push -----
+#
+# docker tag [image id] thospfuller/rockstar-rstudio:1.0.0
+# docker push thospfuller/rockstar-rstudio:1.0.0
+#
 # ----- Testing begins -----
 #
 # docker stop $(docker ps -aq) && docker rm $(docker ps -aq) && docker rmi $(docker images -q)
