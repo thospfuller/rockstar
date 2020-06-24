@@ -73,6 +73,7 @@ RUN R -e 'install.packages("rJava")'
 RUN R -e 'install.packages("xml2")'
 RUN R -e 'install.packages("roxygen2")'
 RUN R -e 'install.packages("devtools")'
+RUN R -e 'install.packages("logging")'
 
 RUN sudo apt-get update
 
