@@ -40,3 +40,5 @@ then
 ```docker run -d -p 8787:8787 -e PASSWORD=password --name rstudio -i -t f8c59f41e2d7```
 
 Finally, browse to [http://localhost:8787](http://localhost:8787) and enter the username 'rstudio' and password 'password' and you should see the following.
+
+![An example of a container created from the Rockstar RStudio docker image running on localhost:8787.](images/rockstar-rstudio-docker-container-running-localhost-port-8787.png "An example of a container created from the Rockstar RStudio docker image running on localhost:8787.")
