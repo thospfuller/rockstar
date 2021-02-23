@@ -16,6 +16,6 @@ This Rockstar RStudio Dockerfile inherits from [rocker/rstudio](https://hub.dock
 
 Note also that the _rstudio_ user has been added to the sudo group.
 
-Rockstar is used by the RCOBOLDI ( R COBOL Data Integration) Package which is an R package for importing COBOL CopyBook data into the R Project as data frames.
+Rockstar is used by the [RCOBOLDI (R COBOL Data Integration) Package](https://github.com/thospfuller/rcoboldi), which is an R package for importing COBOL CopyBook data into the R Project as data frames.
 
 Rockstar can also be helpful for data scientists or data engineers who need to use R with RJava. The rJava package can be slightly involved to set up and the Rockstar RStudio Dockerfile will help you get past this. The Rockstar RStudio Dockerfile can also act as a referece for engineers that need to configure rJava with a JDK or JRE.
