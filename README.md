@@ -42,7 +42,11 @@ then
 Next, browse to [http://localhost:8787](http://localhost:8787) and enter the username 'rstudio' and password 'password' and you should see the following.
 
 ![An example of a container created from the Rockstar RStudio docker image running on localhost:8787.](images/rockstar-rstudio-docker-container-running-localhost-port-8787.png "An example of a container created from the Rockstar RStudio docker image running on localhost:8787.")
+*An example of a container created from the Rockstar RStudio docker image running on localhost:8787.*
 
-Finally, command line access can be acquired -- see the example below for details.
+Finally, command line access to the Rockstar RStudio container can be acquired via the example below -- refer to the image for additional details.
+
+```docker exec -it 2a0889cea66f /bin/bash```
 
 ![An example of obtaining shell access to a running Rockstar RStudio container.](images/rockstar-rstudio-docker-container-bash-cli.png "An example of obtaining shell access to a running Rockstar RStudio container")
+*An example of obtaining shell access to a running Rockstar RStudio container.*
