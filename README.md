@@ -30,10 +30,13 @@ then
 
 should show something like this:
 
-```REPOSITORY                            TAG                 IMAGE ID            CREATED             SIZE
-
+```
+> REPOSITORY                     TAG                 IMAGE ID            CREATED             SIZE
+> thospfuller/rockstar-rstudio   latest              f8c59f41e2d7        41 minutes ago      3.16GB
 ```
 
 then
 
-```docker run -d -p 8787:8787 -e PASSWORD=password --name rstudio -i -t 3f8c1c269940```
+```docker run -d -p 8787:8787 -e PASSWORD=password --name rstudio -i -t f8c59f41e2d7```
+
+Finally, browse to [http://localhost:8787](http://localhost:8787) and enter the username 'rstudio' and password 'password' and you should see the following.
